@@ -2,10 +2,10 @@ steps:
   - name: "gcr.io/cloud-builders/docker"
     args:
       - "build"
-      - "--tag=asia.gcr.io/$PROJECT_ID/golang:latest"
+      - "--tag=gcr.io/$PROJECT_ID/golang:latest"
       - "--file=Dockerfile"
       - "."
     waitFor: ["-"]
 
 images:
-  - "asia.gcr.io/$PROJECT_ID/golang:latest"
+  - "gcr.io/$PROJECT_ID/golang:latest"
